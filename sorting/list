@@ -1,0 +1,24 @@
+#Comparison sort algorithms
+[bubble-sort] - Bubble sort
+[coctail-sort] - Coctail sort
+[comb-sort] - Comb sort
+[cycle-sort] - Cycle sort
+[gnome-sort] - Gnome sort
+[heap-sort] - Heap sort
+[heap-sort-adaptive] - Adaptive heap sort
+[insertion-sort] - Insertion sort
+[introsort] - Introsort
+[library-sort] - Library sort
+[merge-sort] - Merge sort
+[merge-sort-cascade] - Cascade merge sort
+[merge-sort-oscillating] - Oscillating merge sort
+[merge-sort-polyphase] - Polyphase merge sort
+[odd-even-sort] - Odd-even sort
+[patience-sort] - Patience sort
+[quick-sort] - Quick sort
+[selecton-sort] - Selection sort
+[shell-sort] - Shell sort
+[smooth-sort] - Smoothsort
+[stooge-sort] - Stooge sort
+[stand-sort] - Stand sort
+[tim-sort] - Tim sort
