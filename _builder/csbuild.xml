@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <PropertyGroup>
-    </PropertyGroup>
+<Project ToolsVersion="4.0" DefaultTarget="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<BinaryPath>bin\csharp\</BinaryPath>
+	</PropertyGroup>
 
-    <ItemGroup>
-    
-    </ItemGroup>
+	<ItemGroup>
+		<!-- Sorting -->
+		<CSFile Include="..\sorting\csharp\*.cs" />
+	</ItemGroup>
+	
+	<Target Name="Build">
+		<MakeDir Directories="$(BinaryPath)" Condition="!Exists('$(BinaryPath)')" />
+		<Message Text="Start building" />
+		<Csc Sources="@(CSFile)" TargetType="library" OutputAssembly="$(BinaryPath)Sorting.dll" />
+	</Target>
 
-    <Target Name="Default">
-        <Message Text="Start building"
-    </Target>
+	<Target Name="Clear">
+		<Delete Files="$(BinaryPath)*.cs" />
+	</Target>
+
+	<Target Name="Rebuild" DependsOnTargets="Clean;Build" />
 </Project>
