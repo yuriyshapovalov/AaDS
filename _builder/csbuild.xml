@@ -32,7 +32,7 @@
     <Message Text="****************************************" />
     <Csc Sources="@(CSTestsSorting)" 
          References="@(Reference)"
-         TargetType="library"
+         TargetType="library" 
          OutputAssembly="$(TestBinPath)SortingTest.dll" />
   </Target>
 
