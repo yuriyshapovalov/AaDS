@@ -1,23 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTarget="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<PropertyGroup>
-		<BinaryPath>bin\csharp\</BinaryPath>
-	</PropertyGroup>
+<Project DefaultTarget="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <BinPath>bin\csharp\</BinPath>
+    <TestBinPath>tests\csharp\</TestBinPath>
+  </PropertyGroup>
 
-	<ItemGroup>
-		<!-- Sorting -->
-		<CSFile Include="..\sorting\csharp\*.cs" />
-	</ItemGroup>
-	
-	<Target Name="Build">
-		<MakeDir Directories="$(BinaryPath)" Condition="!Exists('$(BinaryPath)')" />
-		<Message Text="Start building" />
-		<Csc Sources="@(CSFile)" TargetType="library" OutputAssembly="$(BinaryPath)Sorting.dll" />
-	</Target>
+  <ItemGroup>
+    <!-- Sorting -->
+    <CSFilesSorting Include="..\sorting\csharp\*.cs" />
+    <CSTestsSorting Include="..\_tests\sorting\csharp\*.cs" />
+  </ItemGroup>
 
-	<Target Name="Clear">
-		<Delete Files="$(BinaryPath)*.cs" />
-	</Target>
+  <ItemGroup>
+    <Reference Include="lib\nunit.framework.dll" />
+    <Reference Include="lib\nunit.mocks.dll" />
+  </ItemGroup>
 
-	<Target Name="Rebuild" DependsOnTargets="Clean;Build" />
+  <Target Name="Build">
+    <MakeDir Directories="$(BinPath)" Condition="!Exists('$(BinPath)')" />
+    <Message Text="****************************************" />
+    <Message Text="             Build Libraries            " />
+    <Message Text="****************************************" />
+    <Csc Sources="@(CSFilesSorting)"
+         TargetType="library" 
+         OutputAssembly="$(BinPath)Sorting.dll" />
+  </Target>
+
+  <Target Name="BuildTests">
+    <MakeDir Directories="$(TestBinPath)" Condition="!Exists('$(TestBinPath)')" />
+    <Message Text="****************************************" />
+    <Message Text="               Build Tests              " />
+    <Message Text="****************************************" />
+    <Csc Sources="@(CSTestsSorting)" 
+         References="@(Reference)"
+         TargetType="library"
+         OutputAssembly="$(TestBinPath)SortingTest.dll" />
+  </Target>
+
+  <Target Name="Clear">
+    <Delete Files="$(BinaryPath)*.cs" />
+  </Target>
+
+  <Target Name="Rebuild" DependsOnTargets="Clean;Build" />
+
+  <Target Name="BuildWithTests" DependsOnTargets="Build;BuildTests"></Target>
 </Project>

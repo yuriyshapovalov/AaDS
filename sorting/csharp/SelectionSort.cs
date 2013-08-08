@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Sorting.Algorithms
+﻿namespace Sorting.Algorithms
 {
     /// <summary>
     /// Selection sort algorithm
