@@ -1,4 +1,4 @@
-<Project DefaultTarget="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTarget="BuildWithTests" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <BinPath>bin\csharp\</BinPath>
     <TestBinPath>tests\csharp\</TestBinPath>
@@ -8,11 +8,14 @@
     <!-- Sorting -->
     <CSFilesSorting Include="..\sorting\csharp\*.cs" />
     <CSTestsSorting Include="..\_tests\sorting\csharp\*.cs" />
+    <CSDataProvider Include="..\_data\*.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="lib\nunit.framework.dll" />
     <Reference Include="lib\nunit.mocks.dll" />
+    <Reference Include="bin\csharp\Sorting.dll" />
+    <Reference Include="tests\csharp\DataProvider.dll" />
   </ItemGroup>
 
   <Target Name="Build">
@@ -30,10 +33,19 @@
     <Message Text="****************************************" />
     <Message Text="               Build Tests              " />
     <Message Text="****************************************" />
+    <Csc Sources="@(CSDataProvider)"
+         TargetType="library"
+         OutputAssembly="$(TestBinPath)DataProvider.dll" />
+
+    <Csc Sources="@(CSFilesSorting)"
+         TargetType="library"
+         OutputAssembly="$(TestBinPath)Sorting.dll" />
+    
     <Csc Sources="@(CSTestsSorting)" 
          References="@(Reference)"
          TargetType="library" 
          OutputAssembly="$(TestBinPath)SortingTest.dll" />
+    
   </Target>
 
   <Target Name="Clear">
