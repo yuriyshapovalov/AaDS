@@ -16,5 +16,6 @@
 *~
 bin/
 *.exe
+*.dll
 *TestResult.xml
 *VisualState.xml

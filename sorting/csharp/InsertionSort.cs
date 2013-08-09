@@ -1,4 +1,4 @@
-﻿namespace Sorting.Algorithms
+﻿namespace AaDS.Sorting
 {
     /// <summary>
     /// Insertion sort algorithm
