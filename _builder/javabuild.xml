@@ -1,0 +1,5 @@
+<project name="AaDS" default="build">
+    <target name="build" description="Do the build">
+        <echo>Build script example</echo>
+    </target>
+</project>
