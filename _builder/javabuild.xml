@@ -1,5 +1,18 @@
 <project name="AaDS" default="build">
-    <target name="build" description="Do the build">
-        <echo>Build script example</echo>
-    </target>
+
+  <target name="make.dirs">
+    <mkdir dir="bin/java" />
+    <mkdir dir="bin/java/class" />
+  </target>
+  
+  <target name="build" description="Do the build" depends="make.dirs">
+    <javac destdir="bin/java/class">
+      <src path="../sorting/java" />
+    </javac>
+  </target>
+
+  <target name="clean">
+    <delete dir="bin/java" />
+  </target>
+  
 </project>
