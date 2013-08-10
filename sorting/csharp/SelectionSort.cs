@@ -19,9 +19,11 @@
                 for(int j = i; j < array.Length; j++)
                 {
                     // if element on 'j' position is less that element on 'min' position
-                    if(array[min] > array[j])
+                    if (array[min] > array[j])
+                    {
                         // change reference to 'min' position
                         min = j;
+                    }
                 }
 
                 // if current element 'i' is not minimal
