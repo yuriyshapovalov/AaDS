@@ -1,12 +1,14 @@
-﻿namespace AaDS.Sorting
+﻿using System;
+
+namespace AaDS.Sorting
 {
     /// <summary>
     /// Selection sort algorithm
     ///  Θ(n) ~ N^2
     /// </summary>
-    public class SelectionSort : ISortingAlgorithm
+    public class SelectionSort<T> : ISort<T> where T : IComparable, new()
     {
-        public int[] sort(int[] array)
+        public T[] Sort(T[] array)
         {
             // for all elements in array
             for(int i = 0; i <= array.Length; i++)
@@ -19,7 +21,7 @@
                 for(int j = i; j < array.Length; j++)
                 {
                     // if element on 'j' position is less that element on 'min' position
-                    if (array[min] > array[j])
+                    if (array[min].CompareTo(array[j]) > 0) // array[min] > array[j]
                     {
                         // change reference to 'min' position
                         min = j;

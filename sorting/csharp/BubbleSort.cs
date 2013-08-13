@@ -1,12 +1,14 @@
+using System;
+
 namespace AaDS.Sorting
 {
     /// <summary>
     /// Bubble sort algorithm
     ///  Θ(n) ~ N^2
     /// </summary>
-    public class BubbleSort : ISortingAlgorithm
+    public class BubbleSort<T> : ISort<T> where T : IComparable, new()
     {
-        int[] ISortingAlgorithm.sort(int[] array)
+        public T[] Sort(T[] array)
         {
             bool clear = false;
             while (!clear)
@@ -15,7 +17,7 @@ namespace AaDS.Sorting
 
                 for (int i = 0; i < array.Length - 1; i++)
                 {
-                    if (array[i] > array[i + 1])
+                    if (array[i].CompareTo(array[i + 1]) > 0) // array[i] > array[i + 1]
                     {
                         clear = false;
 
