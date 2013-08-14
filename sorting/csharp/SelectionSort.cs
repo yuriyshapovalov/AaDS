@@ -32,7 +32,7 @@ namespace AaDS.Sorting
                 if(min != i)
                 {
                     // change value of current element and minimal element
-                    int temp = array[i];
+                    T temp = array[i];
                     array[i] = array[min];
                     array[min] = temp;
                 }       

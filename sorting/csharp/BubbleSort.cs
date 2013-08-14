@@ -21,7 +21,7 @@ namespace AaDS.Sorting
                     {
                         clear = false;
 
-                        int temp = array[i];
+                        T temp = array[i];
                         array[i] = array[i + 1];
                         array[i + 1] = temp;
                     }

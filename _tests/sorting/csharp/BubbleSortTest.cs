@@ -5,18 +5,18 @@ using AaDS.DataProvider;
 [TestFixture]
 public class BubbleSortTest
 {
-    private ISortingAlgorithm sorter;
+    private ISort<int> sorter;
     public DataProvider provider = DataProvider.GetDataProvider();
 
     public BubbleSortTest ()
 	{
-        this.sorter = new BubbleSort();
+        this.sorter = new BubbleSort<int>();
 	}
 
     [Test]
     public void BubbleSortSimpleData()
     {
-        int[] temp = sorter.sort(provider.GetRandomData1K());
+        int[] temp = sorter.Sort((int[])provider.GetRandomData1K());
 
         for(int i = 0; i < temp.Length-1; i++)
         {
