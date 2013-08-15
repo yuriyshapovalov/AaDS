@@ -26,6 +26,15 @@ public class BubbleSortTest
             }
         }
 
+    }
 
+    [Test]
+    public void Sort_EmptyArray_Success()
+    {
+    }
+
+    [Test]
+    public void Sort_OneElementArray_Success()
+    {
     }
 }

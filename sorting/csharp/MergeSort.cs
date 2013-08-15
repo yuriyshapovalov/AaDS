@@ -6,7 +6,11 @@ namespace AaDS.Sorting
     {
         public T[] Sort(T[] array)
         {
-            return array;
+	    // if array has only zero or one element, it is already sorted
+	    if(array.Count <= 1)
+	    {
+                return array;
+	    }
         }
     }
 }
