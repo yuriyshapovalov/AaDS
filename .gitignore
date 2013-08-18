@@ -17,5 +17,6 @@
 bin/
 *.exe
 *.dll
+*.swp
 *TestResult.xml
 *VisualState.xml

@@ -1,18 +1,19 @@
 
-public class LinkedList<T>
+namespace AaDS.Lists
 {
-	private Node<T> first;
-
-    private class Node<T>
+    public class LinkedList<T>
     {
-        public T value { get; set; }
-        public Node<T> Next { get; set; }
+        private Node _first;
+
+        private class Node
+        {
+            T value;
+            Node Next;
+        }
+
+        public LinkedList()
+        {
+            _first = new Node();
+        }
     }
-    
-	public LinkedList()
-	{
-		_first = new Node<T>();
-	}
-
-
 }

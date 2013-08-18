@@ -8,6 +8,13 @@
     <!-- Sorting -->
     <CSFilesSorting Include="..\sorting\csharp\*.cs" />
     <CSTestsSorting Include="..\_tests\sorting\csharp\*.cs" />
+
+    <CSFilesLists Include="..\lists\csharp\*.cs" />
+    <CSTestsLists Include="..\_tests\lists\csharp\*.cs" />
+
+    <CSFilesTrees Include="..\trees\csharp\*.cs" />
+    <CSTestsTrees Include="..\_tests\trees\csharp\*.cs" />
+    
     <CSDataProvider Include="..\_data\*.cs" />
   </ItemGroup>
 
@@ -15,6 +22,8 @@
     <Reference Include="lib\nunit.framework.dll" />
     <Reference Include="lib\nunit.mocks.dll" />
     <Reference Include="bin\csharp\Sorting.dll" />
+    <Reference Include="bin\csharp\Lists.dll" />
+    <Reference Include="bin\csharp\Trees.dll" />
     <Reference Include="tests\csharp\DataProvider.dll" />
   </ItemGroup>
 
@@ -26,6 +35,14 @@
     <Csc Sources="@(CSFilesSorting)"
          TargetType="library" 
          OutputAssembly="$(BinPath)Sorting.dll" />
+
+    <Csc Sources="@(CSFilesLists)"
+         TargetType="library"
+         OutputAssembly="$(BinPath)Lists.dll" />
+
+    <Csc Sources="@(CSFilesTrees)"
+         TargetType="library"
+         OutputAssembly="$(BinPath)Trees.dll" />
   </Target>
 
   <Target Name="BuildTests">
@@ -44,6 +61,24 @@
     <Csc Sources="@(CSTestsSorting)" 
          References="@(Reference)"
          TargetType="library" 
+         OutputAssembly="$(TestBinPath)SortingTest.dll" />
+
+    <Csc Sources="@(CSFilesLists)"
+         TargetType="library"
+         OutputAssembly="$(TestBinPath)Sorting.dll" />
+
+    <Csc Sources="@(CSTestsLists)"
+         References="@(Reference)"
+         TargetType="library"
+         OutputAssembly="$(TestBinPath)SortingTest.dll" />
+
+    <Csc Sources="@(CSFilesTrees)"
+         TargetType="library"
+         OutputAssembly="$(TestBinPath)Sorting.dll" />
+
+    <Csc Sources="@(CSTestsTrees)"
+         References="@(Reference)"
+         TargetType="library"
          OutputAssembly="$(TestBinPath)SortingTest.dll" />
     
   </Target>
