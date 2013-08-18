@@ -6,11 +6,13 @@ using AaDS.DataProvider;
 public class BubbleSortTest
 {
     private ISort<int> sorter;
-    public DataProvider provider = DataProvider.GetDataProvider();
+    public DataProvider provider;
 
-    public BubbleSortTest ()
+    [SetUp]
+    public void Init()
 	{
         this.sorter = new BubbleSort<int>();
+        this.provider = DataProvider.GetDataProvider();
 	}
 
     [Test]

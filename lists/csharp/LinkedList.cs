@@ -1,10 +1,18 @@
 
 public class LinkedList<T>
 {
-	private T _element;
+	private Node<T> first;
 
-	public LinkedList(T element)
+    private class Node<T>
+    {
+        public T value { get; set; }
+        public Node<T> Next { get; set; }
+    }
+    
+	public LinkedList()
 	{
-		_element = element;
+		_first = new Node<T>();
 	}
+
+
 }
