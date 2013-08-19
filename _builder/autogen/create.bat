@@ -24,7 +24,7 @@ IF NOT EXIST ..\_tests\%1\R 		mkdir ..\_tests\%1\R
 
 echo Creating stub files...
 
-IF NOT EXIST ..\%1\csharp\%2.cs 	copy /y NUL ..\%1\csharp\%2.cs
+IF NOT EXIST ..\%1\csharp\%2.cs 	copy /y NUL ..\%1\csharp\%2.cs && call ../autofill/csCode.bat 
 IF NOT EXIST ..\%1\java\%2.java 	copy /y NUL ..\%1\java\%2.java
 IF NOT EXIST ..\%1\cpp\%2.cpp 		copy /y NUL ..\%1\cpp\%2.cpp
 IF NOT EXIST ..\%1\javascript\%2.js 	copy /y NUL ..\%1\javascript\%2.js
