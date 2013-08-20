@@ -1,8 +1,4 @@
 @echo off
 
-echo.namespace AaDS.%1  >> text.txt
-echo.{  >> text.txt
-echo.	public class %2  >> text.txt
-echo.	{} >> text.txt
-echo.}  >> text.txt
-
+echo.// %2>>%1
+echo.// not defined JS testing framework :(>>%1

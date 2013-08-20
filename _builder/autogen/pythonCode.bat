@@ -1,8 +1,10 @@
 @echo off
 
-echo.namespace AaDS.%1  >> text.txt
-echo.{  >> text.txt
-echo.	public class %2  >> text.txt
-echo.	{} >> text.txt
-echo.}  >> text.txt
+echo.# %2>>%1
+echo.# O(n) ~ >>%1
+echo.class %2:>>%1
+echo.	# Method description >>%1
+echo.	# O(n) ~ >>%1
+echo.	def stub_method(x):>>%1
+echo.		# >>%1
 

@@ -1,8 +1,16 @@
 @echo off
 
-echo.namespace AaDS.%1  >> text.txt
-echo.{  >> text.txt
-echo.	public class %2  >> text.txt
-echo.	{} >> text.txt
-echo.}  >> text.txt
+// %2
 
+package AaDS.%3 {
+
+	// @description %2
+	// O(n) ~
+	public class %2 {
+	
+		// @description
+		// O(n) ~
+		public void stubMethod() {
+		}
+	}
+}
