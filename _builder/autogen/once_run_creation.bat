@@ -1,10 +1,8 @@
-; should be called once
-; preventing accidancly run
+REM should be called once
+REM preventing accidancly run
 goto exit
 
 ; _call_ _FolderName_ _ClassName_ _Namespace_
-call create sorting BubbleSort Sorting
-call create sorting TimSort Sorting
 
 ;Sorting
 
@@ -44,6 +42,15 @@ call create sorting TimSort Sorting
 call create sorting TournamentSort Sorting
 call create sorting TreeSort Sorting
 call create sorting UnshuffleSort Sorting
+
+;Lists
+call create lists LinkedList Lists
+call create lists DoublyLinkedList Lists
+call create lists SelfOrganizedList Lists
+call create lists SkipList Lists
+call create lists UnrolledLinkedList Lists
+call create lists VList Lists
+call create lists DoublyConnectedEdgeList Lists
 
 ; Trees
 call create trees AATree Trees
