@@ -17,8 +17,26 @@ public class DoublyLinkedListTest
 
 	// remove it after real code will be created
 	[Test]
-	public void AlwaysFailedTestStub()
+	public void DoublyLinkedList_Add_IntContainerTest()
 	{
-		Assert.Fail();
+        DoublyLinkedList<int> list = new DoublyLinkedList<int>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+
+        Assert.AreEqual(list.Length, 3);
+        Assert.AreEqual(list.value, 1);
+        Assert.AreEqual(list.Prev(), null);
+        Assert.AreEqual(list.Next().value, 2);
+        Assert.AreEqual(list.Next().Next().value, 3);
+        Assert.AreEqual(list.Next().Next().Next(), null);
+        Assert.AreEqual(list.Next().Next().Prev().value, 2);
+        Assert.AreEqual(list.Next().Next().Prev().Prev().value, 1);
 	}
+
+    [Test]
+    public void DoublyLinkedList_Remove_IntContainerTest()
+    {
+        
+    }
 }

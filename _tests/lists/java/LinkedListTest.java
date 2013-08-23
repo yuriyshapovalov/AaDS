@@ -11,7 +11,7 @@ public class LinkedListTest {
 	}
 
 	@Test
-	public void stubTestFunc() {
+	public void LinkedList_Add_() {
 		Assert.fail("not implemented");
 	}
 }
