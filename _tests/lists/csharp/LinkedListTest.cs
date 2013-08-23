@@ -1,20 +1,23 @@
 using NUnit.Framework;
 using AaDS.Lists;
+using AaDS.DataProvider;
 
 [TestFixture]
 public class LinkedListTest
 {
-    private LinkedList<int> _list;
+    //private LinkedList<int> _testInstance;
+    //private DataProvider _provider;
 
     [SetUp]
     public void Init() {
-       // list = new LinkedList<int>();
+        //_testInstance = new LinkedList<int>();
+        //_provider = DataProvider.GetDataProvider();
     }
 
 	[Test]
 	public void LinkedList_Add_IntContainerTest()
 	{
-        	LinkedList<int> list = new LinkedList<int>();
+        LinkedList<int> list = new LinkedList<int>();
 		list.add(1);
 		list.add(2);
 		list.add(3);
@@ -76,7 +79,7 @@ public class LinkedListTest
 		Assert.AreEqual(list.Length, 3);
 
 		list.add(4);
-		
+
 		// 1 -> 2 -> 3 -> 4 -> null
 		Assert.AreEqual(list.Length, 4);
 

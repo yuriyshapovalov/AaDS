@@ -6,13 +6,13 @@ using AaDS.DataProvider;
 public class DoublyLinkedListTest
 {
 	// private DoublyLinkedList _testInstance;
-	private DataProvider _provider;
+	// private DataProvider _provider;
 
 	[SetUp]
 	public void Init()
 	{
 		// this._testInstance = new DoublyLinkedList();
-		this._provider = DataProvider.GetDataProvider();
+		//this._provider = DataProvider.GetDataProvider();
 	}
 
 	// remove it after real code will be created
