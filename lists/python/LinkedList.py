@@ -7,9 +7,15 @@ class LinkedList:
 	def __init__(self):
 		pass
 	
+	def __init__(self, value):
+		first = Node(value)
+	
 	class Node:
 		self.value = 0
 		self.next = None
+		
+		def __init__(self, value):
+			self.value = value
 		
 		
 	def add(self, x):
