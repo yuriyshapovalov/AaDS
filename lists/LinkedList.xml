@@ -1,0 +1,28 @@
+<api name="Linked List" class="LinkedList">
+	<description>Dynamic data structure contains value and reference to next element</description>
+
+	
+	<method name="add"></method>
+
+	<method name="clear"></method>
+
+	<method name="contains"></method>
+
+	<method name="clone"></method>
+
+	<method name="iterator" return="IIterator">
+		<description>Traversing Linked List only with iterator. Which return default iterator or receive IIterator as parameter and using it (Strategy pattern).</description>
+		<overload>
+			<parameter type="IIterator" name="iterator"></parameter>
+		</overload>
+	</method>
+
+	<method name="remove"></method>
+
+	<method name="size"></method>
+
+	<method name="set"></method>
+
+	<method name="toArray"></method>
+	
+</api>
