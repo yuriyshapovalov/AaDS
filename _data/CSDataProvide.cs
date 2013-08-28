@@ -94,5 +94,18 @@ namespace AaDS.DataProvider
             };
             return data;
         }
+
+        public int[] GetEmptyIntegerArray()
+        {
+            int[] data = { 1 };
+            return data;
+        }
+
+        public int[] GetOneElementIntegerArray()
+        {
+            int[] data = {};
+            return data;
+        }
+
     }
 }
