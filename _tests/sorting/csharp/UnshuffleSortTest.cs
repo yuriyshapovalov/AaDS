@@ -8,12 +8,21 @@ public class UnshuffleSortTest
     private ISort<int> sorter;
     public DataProvider provider;
 
+    private SortingTester st;
+
     [SetUp]
     public void Init()
 	{
         this.sorter = new UnshuffleSort<int>();
         this.provider = DataProvider.GetDataProvider();
+
+        this.st = new SortingTester();
 	}
+    
+    // basic tests
+    [Test]
+    public void Sort
+
 
     [Test]
     public void Sort_UnshuffleSortSimpleIntegerArray()
