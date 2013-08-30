@@ -6,7 +6,7 @@
   </target>
   
   <target name="build" description="Do the build" depends="make.dirs">
-    <javac destdir="bin/java/class">
+    <javac includeantruntime="false" destdir="bin/java/class">
       <src path="../sorting/java" />
     </javac>
   </target>

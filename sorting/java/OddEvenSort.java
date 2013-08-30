@@ -1,14 +1,13 @@
 // Sorting - OddEvenSort
 
-package AaDS.Sorting {
+package AaDS.Sorting;
 
-	// @description Sorting - OddEvenSort
-	// O(n) ~ 
-	public class OddEvenSort {
+// @description Sorting - OddEvenSort
+// O(n) ~ 
+public class OddEvenSort {
 
-		// @description
-		// O(n) ~
-		public void stubMethod() {
-		}
+	// @description
+	// O(n) ~
+	public void stubMethod() {
 	}
 }

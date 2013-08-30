@@ -1,14 +1,13 @@
 // Sorting - SmoothSort
 
-package AaDS.Sorting {
+package AaDS.Sorting;
 
-	// @description Sorting - SmoothSort
-	// O(n) ~ 
-	public class SmoothSort {
+// @description Sorting - SmoothSort
+// O(n) ~ 
+public class SmoothSort {
 
-		// @description
-		// O(n) ~
-		public void stubMethod() {
-		}
+	// @description
+	// O(n) ~
+	public void stubMethod() {
 	}
 }

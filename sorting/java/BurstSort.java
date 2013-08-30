@@ -1,14 +1,13 @@
 // Sorting - BurstSort
 
-package AaDS.Sorting {
+package AaDS.Sorting;
 
-	// @description Sorting - BurstSort
-	// O(n) ~ 
-	public class BurstSort {
+// @description Sorting - BurstSort
+// O(n) ~ 
+public class BurstSort {
 
-		// @description
-		// O(n) ~
-		public void stubMethod() {
-		}
+	// @description
+	// O(n) ~
+	public void stubMethod() {
 	}
 }

@@ -1,14 +1,13 @@
 // Sorting - MergeSort
 
-package AaDS.Sorting {
+package AaDS.Sorting;
 
-	// @description Sorting - MergeSort
-	// O(n) ~ 
-	public class MergeSort {
+// @description Sorting - MergeSort
+// O(n) ~ 
+public class MergeSort {
 
-		// @description
-		// O(n) ~
-		public void stubMethod() {
-		}
+	// @description
+	// O(n) ~
+	public void stubMethod() {
 	}
 }

@@ -1,14 +1,13 @@
 // Sorting - GnomeSort
 
-package AaDS.Sorting {
+package AaDS.Sorting;
 
-	// @description Sorting - GnomeSort
-	// O(n) ~ 
-	public class GnomeSort {
+// @description Sorting - GnomeSort
+// O(n) ~ 
+public class GnomeSort {
 
-		// @description
-		// O(n) ~
-		public void stubMethod() {
-		}
+	// @description
+	// O(n) ~
+	public void stubMethod() {
 	}
 }

@@ -1,14 +1,13 @@
 // Sorting - IntroSort
 
-package AaDS.Sorting {
+package AaDS.Sorting;
 
-	// @description Sorting - IntroSort
-	// O(n) ~ 
-	public class IntroSort {
+// @description Sorting - IntroSort
+// O(n) ~ 
+public class IntroSort {
 
-		// @description
-		// O(n) ~
-		public void stubMethod() {
-		}
+	// @description
+	// O(n) ~
+	public void stubMethod() {
 	}
 }

@@ -1,14 +1,13 @@
 // Sorting - CoctailSort
 
-package AaDS.Sorting {
+package AaDS.Sorting;
 
-	// @description Sorting - CoctailSort
-	// O(n) ~ 
-	public class CoctailSort {
+// @description Sorting - CoctailSort
+// O(n) ~ 
+public class CoctailSort {
 
-		// @description
-		// O(n) ~
-		public void stubMethod() {
-		}
+	// @description
+	// O(n) ~
+	public void stubMethod() {
 	}
 }

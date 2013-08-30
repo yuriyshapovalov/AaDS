@@ -1,14 +1,13 @@
 // Sorting - TimSort
 
-package AaDS.Sorting {
+package AaDS.Sorting;
 
-	// @description Sorting - TimSort
-	// O(n) ~ 
-	public class TimSort {
+// @description Sorting - TimSort
+// O(n) ~ 
+public class TimSort {
 
-		// @description
-		// O(n) ~
-		public void stubMethod() {
-		}
+	// @description
+	// O(n) ~
+	public void stubMethod() {
 	}
 }

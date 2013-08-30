@@ -1,14 +1,13 @@
 // Sorting - BeadSort
 
-package AaDS.Sorting {
+package AaDS.Sorting;
 
-	// @description Sorting - BeadSort
-	// O(n) ~ 
-	public class BeadSort {
+// @description Sorting - BeadSort
+// O(n) ~ 
+public class BeadSort {
 
-		// @description
-		// O(n) ~
-		public void stubMethod() {
-		}
+	// @description
+	// O(n) ~
+	public void stubMethod() {
 	}
 }

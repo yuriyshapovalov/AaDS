@@ -1,14 +1,13 @@
 // Sorting - UnshuffleSort
 
-package AaDS.Sorting {
+package AaDS.Sorting;
 
-	// @description Sorting - UnshuffleSort
-	// O(n) ~ 
-	public class UnshuffleSort {
+// @description Sorting - UnshuffleSort
+// O(n) ~ 
+public class UnshuffleSort {
 
-		// @description
-		// O(n) ~
-		public void stubMethod() {
-		}
+	// @description
+	// O(n) ~
+	public void stubMethod() {
 	}
 }

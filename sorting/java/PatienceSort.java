@@ -1,14 +1,13 @@
 // Sorting - PatienceSort
 
-package AaDS.Sorting {
+package AaDS.Sorting;
 
-	// @description Sorting - PatienceSort
-	// O(n) ~ 
-	public class PatienceSort {
+// @description Sorting - PatienceSort
+// O(n) ~ 
+public class PatienceSort {
 
-		// @description
-		// O(n) ~
-		public void stubMethod() {
-		}
+	// @description
+	// O(n) ~
+	public void stubMethod() {
 	}
 }

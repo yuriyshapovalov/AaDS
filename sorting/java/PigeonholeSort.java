@@ -1,14 +1,13 @@
 // Sorting - PigeonholeSort
 
-package AaDS.Sorting {
+package AaDS.Sorting;
 
-	// @description Sorting - PigeonholeSort
-	// O(n) ~ 
-	public class PigeonholeSort {
+// @description Sorting - PigeonholeSort
+// O(n) ~ 
+public class PigeonholeSort {
 
-		// @description
-		// O(n) ~
-		public void stubMethod() {
-		}
+	// @description
+	// O(n) ~
+	public void stubMethod() {
 	}
 }

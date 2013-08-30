@@ -1,14 +1,13 @@
 // Sorting - TournamentSort
 
-package AaDS.Sorting {
+package AaDS.Sorting;
 
-	// @description Sorting - TournamentSort
-	// O(n) ~ 
-	public class TournamentSort {
+// @description Sorting - TournamentSort
+// O(n) ~ 
+public class TournamentSort {
 
-		// @description
-		// O(n) ~
-		public void stubMethod() {
-		}
+	// @description
+	// O(n) ~
+	public void stubMethod() {
 	}
 }

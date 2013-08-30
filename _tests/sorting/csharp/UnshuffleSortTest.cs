@@ -8,7 +8,7 @@ public class UnshuffleSortTest
     private ISort<int> sorter;
     public DataProvider provider;
 
-    private SortingBasicTester _basicTester
+    private SortingBasicTester _basicTester;
     private SortingPerformanceTester _perfTester;
 
     [SetUp]
