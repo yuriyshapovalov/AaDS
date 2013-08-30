@@ -8,10 +8,11 @@ public class UnshuffleSortTest
     private ISort<int> sorter;
     public DataProvider provider;
 
-    private SortingTester st;
+    private SortingBasicTester _basicTester
+    private SortingPerformanceTester _perfTester;
 
     [SetUp]
-    public void Init()
+    public override void Init()
 	{
         this.sorter = new UnshuffleSort<int>();
         this.provider = DataProvider.GetDataProvider();
@@ -21,7 +22,10 @@ public class UnshuffleSortTest
     
     // basic tests
     [Test]
-    public void Sort
+    public void SortTest()
+    {
+ 
+    }
 
 
     [Test]
