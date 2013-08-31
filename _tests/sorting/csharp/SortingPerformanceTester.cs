@@ -1,11 +1,12 @@
+using System;
 using NUnit.Framework;
 using AaDS.Sorting;
 using AaDS.DataProvider;
 
 [TestFixture]
-public class SortingPerformanceTester
+public class SortingPerformanceTester<T> where T : IComparable
 {
-    protected ISort _sort;
+    protected ISort<T> _sort;
 
     [SetUp]
     public virtual void Init()

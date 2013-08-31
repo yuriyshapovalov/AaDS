@@ -53,7 +53,7 @@ public class BubbleSortTest
     {
         for(int i = 0; i < array.Length-1; i++)
         {
-            if (temp[i] > temp[i+1])
+            if (array[i] > array[i+1])
             {
                 return false;
             }

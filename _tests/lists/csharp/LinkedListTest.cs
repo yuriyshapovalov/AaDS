@@ -3,7 +3,7 @@ using AaDS.Lists;
 using AaDS.DataProvider;
 
 [TestFixture]
-public class LinkedListTest
+public class LinkedListExtTest
 {
     //private LinkedList<int> _testInstance;
     //private DataProvider _provider;
@@ -15,76 +15,76 @@ public class LinkedListTest
     }
 
 	[Test]
-	public void LinkedList_Add_IntContainerTest()
+	public void LinkedListExt_Add_IntContainerTest()
 	{
-        LinkedList<int> list = new LinkedList<int>();
-		list.add(1);
-		list.add(2);
-		list.add(3);
+        LinkedListExt<int> list = new LinkedList<int>();
+		list.Add(1);
+		list.Add(2);
+		list.Add(3);
 
 		Assert.AreEqual(list.Length, 3);
-		Assert.AreEqual(list.value, 1);
-		Assert.AreEqual(list.Next().value, 2);
-		Assert.AreEqual(list.Next().Next().value, 3);
+		Assert.AreEqual(list.Value, 1);
+		Assert.AreEqual(list.Next().Value, 2);
+		Assert.AreEqual(list.Next().Next().Value, 3);
 		Assert.AreEqual(list.Next().Next().Next(), null);
 	}
 
 	[Test]
-	public void LinkedList_Remove_IntContainerTest()
+	public void LinkedListExt_Remove_IntContainerTest()
 	{
-		LinkedList<int> list = new LinkedList<int>();
-		list.add(1);
-		list.add(2);
-		list.add(3);
-		list.add(4);
+		LinkedListExt<int> list = new LinkedList<int>();
+		list.Add(1);
+		list.Add(2);
+		list.Add(3);
+		list.Add(4);
 
 		Assert.AreEqual(list.Length, 4);
 		
 		list.remove(4);
 		// 1 -> 2 -> 3 -> null 
 		Assert.AreEqual(list.Length, 3);
-		Assert.AreEqual(list.value, 1);
-		Assert.AreEqual(list.Next().value, 2);
-		Assert.AreEqual(list.Next().Next().value, 3);
+		Assert.AreEqual(list.Value, 1);
+		Assert.AreEqual(list.Next().Value, 2);
+		Assert.AreEqual(list.Next().Next().Value, 3);
 		Assert.AreEqual(list.Next().Next().Next(), null);
 
-		list.remove(2);
+		list.Remove(2);
 		// 1 -> 3 -> null
 		Assert.AreEqual(list.Length, 2);
-		Assert.AreEqual(list.value, 1);
-		Assert.AreEqual(list.Next().value, 3);
+		Assert.AreEqual(list.Value, 1);
+		Assert.AreEqual(list.Next().Value, 3);
 		Assert.AreEqual(list.Next().Next(), null);		
 
-		list.remove(1);
+		list.Remove(1);
 		//  3 -> null
 		Assert.AreEqual(list.Length, 1);
-		Assert.AreEqual(list.value, 3);
+		Assert.AreEqual(list.Value, 3);
 		Assert.AreEqual(list.Next(), null);
 
-		list.remove(3);
+		list.Remove(3);
 		// null
 		Assert.AreEqual(list.Length, 0);
-		Assert.AreEqual(list.value, null);
+		Assert.AreEqual(list.Value, null);
 	}
 
 	[Test]
-	public void LinkedList_Length_IntContainerTest()
+	public void LinkedListExt_Length_IntContainerTest()
 	{
-		LinkedList<int> list = new LinkedList<int>();
-		list.add(1);
-		list.add(2);
-		list.add(3);
+		LinkedListExt<int> list = new LinkedList<int>();
+		list.Add(1);
+		list.Add(2);
+		list.Add(3);
 
 		// 1 -> 2 -> 3 -> null
 		Assert.AreEqual(list.Length, 3);
 
-		list.add(4);
+		list.Add(4);
 
 		// 1 -> 2 -> 3 -> 4 -> null
 		Assert.AreEqual(list.Length, 4);
 
-		list.remove(4);
-		list.remove(3);
+		list.Remove(4);
+		list.Remove(3);
 
 		// 1-> 2 -> null
 		Assert.AreEqual(list.Length, 2);
