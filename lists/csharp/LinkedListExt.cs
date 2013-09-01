@@ -27,10 +27,12 @@ namespace AaDS.Lists
             this._first = null;
         }
 
-        public int Length { get { this._length; } }
+        public int Length { get { return this._length; } }
 
-        public T Remove(Node node)
-        { }
+        public void Remove(int index)
+        {
+            
+        }
 
 
     }

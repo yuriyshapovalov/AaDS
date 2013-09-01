@@ -16,6 +16,7 @@ public class DoublyLinkedListTest
 	}
 
 	// remove it after real code will be created
+    /*
 	[Test]
 	public void DoublyLinkedList_Add_IntContainerTest()
 	{
@@ -39,4 +40,5 @@ public class DoublyLinkedListTest
     {
         
     }
+     */
 }

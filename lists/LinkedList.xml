@@ -22,7 +22,7 @@
 
   <method name="remove"></method>
 
-  <method name="size"></method>
+  <method name="length"></method>
 
   <method name="set"></method>
 

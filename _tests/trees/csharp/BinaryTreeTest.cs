@@ -5,14 +5,15 @@ using AaDS.DataProvider;
 [TestFixture]
 public class BinaryTreeTest
 {
-	private ITree<int> _tree;
+	//private ITree<int> _tree;
 
 	[SetUp]
 	public void Init()
 	{
-		_tree = new BinaryTree<int>();
+		//_tree = new BinaryTree<int>();
 	}
 
+    /*
 	[Test]
 	public void BinaryTree_InitializationTest()
 	{
@@ -23,5 +24,6 @@ public class BinaryTreeTest
 
 		// Check top element
 	}
+     */
 
 }
