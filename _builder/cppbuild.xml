@@ -1,0 +1,84 @@
+<Project DefaultTarget="BuildWithTests" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <BinPath>bin\cpp\</BinPath>
+    <TestBinPath>tests\cpp\</TestBinPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Sorting -->
+    <CPPFilesSorting Include="..\sorting\cpp\*.cpp" />
+    <CPPTestsSorting Include="..\_tests\sorting\cpp\*.cs" />
+
+    <CPPFilesLists Include="..\lists\cpp\*.cpp" />
+    <CPPTestsLists Include="..\_tests\lists\cpp\*.cpp" />
+
+    <CPPFilesTrees Include="..\trees\cpp\*.cpp" />
+    <CPPTestsTrees Include="..\_tests\trees\cpp\*.cpp" />
+
+    <CSDataProvider Include="..\_data\*.cpp" />
+  </ItemGroup>
+
+  <Target Name="Build">
+    <MakeDir Directories="$(BinPath)" Condition="!Exists('$(BinPath)')" />
+    <Message Text="**********************************************************" />
+    <Message Text="                         Build Libraries" />
+    <Message Text="**********************************************************" />
+    <Csc Sources="@(CSFilesSorting)"
+         TargetType="library"
+         OutputAssembly="$(BinPath)Sorting.dll" />
+
+    <Csc Sources="@(CSFilesLists)"
+         TargetType="library"
+         OutputAssembly="$(BinPath)Lists.dll" />
+
+    <Csc Sources="@(CSFilesTrees)"
+         TargetType="library"
+         OutputAssembly="$(BinPath)Trees.dll" />
+  </Target>
+
+  <Target Name="BuildTests">
+    <MakeDir Directories="$(TestBinPath)" Condition="!Exists('$(TestBinPath)')" />
+    <Message Text="**********************************************************" />
+    <Message Text="                             Build Tests" />
+    <Message Text="**********************************************************" />
+    <Csc Sources="@(CSDataProvider)"
+         TargetType="library"
+         OutputAssembly="$(TestBinPath)DataProvider.dll" />
+
+    <Csc Sources="@(CSFilesSorting)"
+         TargetType="library"
+         OutputAssembly="$(TestBinPath)Sorting.dll" />
+
+    <Csc Sources="@(CSTestsSorting)"
+         References="@(Reference)"
+         TargetType="library"
+         OutputAssembly="$(TestBinPath)SortingTest.dll" />
+
+    <Csc Sources="@(CSFilesLists)"
+         TargetType="library"
+         OutputAssembly="$(TestBinPath)Sorting.dll" />
+
+    <Csc Sources="@(CSTestsLists)"
+         References="@(Reference)"
+         TargetType="library"
+         OutputAssembly="$(TestBinPath)SortingTest.dll" />
+
+    <Csc Sources="@(CSFilesTrees)"
+         TargetType="library"
+         OutputAssembly="$(TestBinPath)Sorting.dll" />
+
+    <Csc Sources="@(CSTestsTrees)"
+         References="@(Reference)"
+         TargetType="library"
+         OutputAssembly="$(TestBinPath)SortingTest.dll" />
+
+  </Target>
+
+  <Target Name="Clear">
+    <Delete Files="$(BinaryPath)*.cs" />
+  </Target>
+
+  <Target Name="Rebuild" DependsOnTargets="Clean;Build" />
+
+  <Target Name="BuildWithTests" DependsOnTargets="Build;BuildTests"></Target>
+</Project>
