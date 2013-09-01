@@ -29,9 +29,9 @@
 
   <Target Name="Build">
     <MakeDir Directories="$(BinPath)" Condition="!Exists('$(BinPath)')" />
-    <Message Text="****************************************" />
-    <Message Text="             Build Libraries            " />
-    <Message Text="****************************************" />
+    <Message Text="**********************************************************" />
+    <Message Text="                         Build Libraries" />
+    <Message Text="**********************************************************" />
     <Csc Sources="@(CSFilesSorting)"
          TargetType="library" 
          OutputAssembly="$(BinPath)Sorting.dll" />
@@ -47,9 +47,9 @@
 
   <Target Name="BuildTests">
     <MakeDir Directories="$(TestBinPath)" Condition="!Exists('$(TestBinPath)')" />
-    <Message Text="****************************************" />
-    <Message Text="               Build Tests              " />
-    <Message Text="****************************************" />
+    <Message Text="**********************************************************" />
+    <Message Text="                             Build Tests" />
+    <Message Text="**********************************************************" />
     <Csc Sources="@(CSDataProvider)"
          TargetType="library"
          OutputAssembly="$(TestBinPath)DataProvider.dll" />

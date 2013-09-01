@@ -1,8 +1,5 @@
 @echo off
 
-echo ====================
-echo      JAVA BUILD
-echo ====================
-
+echo ==================== BUILD JAVA CODE =====================
 ant -f javabuild.xml
 
