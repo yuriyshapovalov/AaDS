@@ -1,10 +1,20 @@
-
-import sys
+# implementation of bubble sort algotithm
+# time = O(n^2)
+# space = O(1)
 
 class BubbleSort:
     
-    dataset = [8, 3, 4, 1, 3, 9, 0, 5, 2, 6]
+    def sort(self, array):
+        is_sorted = False
+        arr_length = len(array)
 
-    def sort():
-        for item in dataset:
-            print (item)
+        while not is_sorted:
+            is_sorted = True
+            for i in range(0, arr_length - 1):
+                if array[i] > array[i+1]:
+                    is_sorted = False
+                    tmp = array[i]
+                    array[i] = array[i+1]
+                    array[i+1] = tmp
+
+        return array
