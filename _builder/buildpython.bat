@@ -13,3 +13,5 @@ copy /y NUL ..\_tests\sorting\python\bin\__init__.py
 copy ..\sorting\python\*.py ..\_tests\sorting\python\bin
 
 REM RUN UNIT TESTS
+
+python ..\_tests\sorting\python\BubbleSortTest.py

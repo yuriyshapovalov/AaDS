@@ -1,5 +1,6 @@
 __author__ = 'Yuriy Shapovalov (shapovalov.yuri@gmail.com)'
 
+from bin import BubbleSort
 import unittest
 #from sorting import BubbleSort
 
