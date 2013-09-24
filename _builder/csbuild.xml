@@ -6,16 +6,16 @@
 
   <ItemGroup>
     <!-- Sorting -->
-    <CSFilesSorting Include="..\sorting\csharp\*.cs" />
-    <CSTestsSorting Include="..\_tests\sorting\csharp\*.cs" />
+    <CSFilesSorting Include="..\csharp\sorting\*.cs" />
+    <CSTestsSorting Include="..\_tests\csharp\sorting\*.cs" />
 
-    <CSFilesLists Include="..\lists\csharp\*.cs" />
-    <CSTestsLists Include="..\_tests\lists\csharp\*.cs" />
+    <CSFilesLists Include="..\csharp\lists\*.cs" />
+    <CSTestsLists Include="..\_tests\csharp\lists\*.cs" />
 
-    <CSFilesTrees Include="..\trees\csharp\*.cs" />
-    <CSTestsTrees Include="..\_tests\trees\csharp\*.cs" />
+    <CSFilesTrees Include="..\csharp\trees\*.cs" />
+    <CSTestsTrees Include="..\_tests\csharp\trees\*.cs" />
     
-    <CSDataProvider Include="..\_data\*.cs" />
+    <CSDataProvider Include="..\_tests\csharp\_dataProvider\*.cs" />
   </ItemGroup>
 
   <ItemGroup>
