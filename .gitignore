@@ -20,3 +20,4 @@ bin/
 *.swp
 *TestResult.xml
 *VisualState.xml
+__pycache__
