@@ -16,7 +16,7 @@ public class BubbleSortTest
 	}
 
     [Test]
-    public void BubbleSortSimpleData()
+    public void BubbleSortSimpleData_Success()
     {
         int[] temp = sorter.Sort((int[])provider.GetRandomData1K());
 
