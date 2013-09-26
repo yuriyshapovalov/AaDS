@@ -65,21 +65,21 @@
 
     <Csc Sources="@(CSFilesLists)"
          TargetType="library"
-         OutputAssembly="$(TestBinPath)Sorting.dll" />
+         OutputAssembly="$(TestBinPath)Lists.dll" />
 
     <Csc Sources="@(CSTestsLists)"
          References="@(Reference)"
          TargetType="library"
-         OutputAssembly="$(TestBinPath)SortingTest.dll" />
+         OutputAssembly="$(TestBinPath)ListTest.dll" />
 
     <Csc Sources="@(CSFilesTrees)"
          TargetType="library"
-         OutputAssembly="$(TestBinPath)Sorting.dll" />
+         OutputAssembly="$(TestBinPath)Trees.dll" />
 
     <Csc Sources="@(CSTestsTrees)"
          References="@(Reference)"
          TargetType="library"
-         OutputAssembly="$(TestBinPath)SortingTest.dll" />
+         OutputAssembly="$(TestBinPath)TreesTest.dll" />
     
   </Target>
 
