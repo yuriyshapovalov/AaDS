@@ -1,6 +1,6 @@
 using NUnit.Framework;
 using AaDS.Sorting;
-using AaDS.DataProvider;
+using AaDS.Helper;
 
 [TestFixture]
 public class SimpleSortTest
@@ -16,9 +16,11 @@ public class SimpleSortTest
 	}
 
 	// remove it after real code will be created
+    /*
 	[Test]
 	public void AlwaysFailedTestStub()
 	{
 		Assert.Fail();
 	}
+     * */
 }

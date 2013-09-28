@@ -15,7 +15,7 @@
     <CSFilesTrees Include="..\csharp\trees\*.cs" />
     <CSTestsTrees Include="..\_tests\csharp\trees\*.cs" />
     
-    <CSDataProvider Include="..\_tests\csharp\_dataProvider\*.cs" />
+    <CSTestHelper Include="..\_tests\csharp\_helper\*.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,7 +24,7 @@
     <Reference Include="bin\csharp\Sorting.dll" />
     <Reference Include="bin\csharp\Lists.dll" />
     <Reference Include="bin\csharp\Trees.dll" />
-    <Reference Include="tests\csharp\DataProvider.dll" />
+    <Reference Include="tests\csharp\TestHelper.dll" />
   </ItemGroup>
 
   <Target Name="Build">
@@ -50,9 +50,9 @@
     <Message Text="**********************************************************" />
     <Message Text="                             Build Tests" />
     <Message Text="**********************************************************" />
-    <Csc Sources="@(CSDataProvider)"
+    <Csc Sources="@(CSTestHelper)"
          TargetType="library"
-         OutputAssembly="$(TestBinPath)DataProvider.dll" />
+         OutputAssembly="$(TestBinPath)TestHelper.dll" />
 
     <Csc Sources="@(CSFilesSorting)"
          TargetType="library"

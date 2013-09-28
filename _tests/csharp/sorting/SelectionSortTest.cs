@@ -1,42 +1,52 @@
 using NUnit.Framework;
 using AaDS.Sorting;
-using AaDS.DataProvider;
+using AaDS.Helper;
 
 [TestFixture]
 public class SelectionSortTest
 {
     private ISort<int> sorter;
-    public DataProvider provider;
+    private DataProvider provider;
+    private Validator validator;
 
     [SetUp]
     public void Init()
-	{
+    {
         this.sorter = new SelectionSort<int>();
         this.provider = DataProvider.GetDataProvider();
-	}
+        this.validator = Validator.GetValidator();
+    }
 
     [Test]
-    public void Test_SelectionSortSimpleIntegerArray()
+    public void SelectionSort_RandomIntegerSequence_Success()
     {
         int[] temp = sorter.Sort((int[])provider.GetRandomData1K());
 
-        for(int i = 0; i < temp.Length-1; i++)
+        if (!validator.ValidateOrder<int>(temp))
         {
-            if (temp[i] > temp[i+1])
-            {
-                Assert.Fail();
-            }
+            Assert.Fail();
         }
-
     }
 
     [Test]
-    public void Sort_EmptyArray()
+    public void SelectionSort_EmptyArray_Success()
     {
+        int[] temp = sorter.Sort((int[])provider.GetEmptyIntegerArray());
+
+        if (!validator.ValidateOrder<int>(temp))
+        {
+            Assert.Fail();
+        }
     }
 
     [Test]
-    public void Sort_OneElementArray()
+    public void SelectionSort_OneElementArray_Success()
     {
+        int[] temp = sorter.Sort((int[])provider.GetOneElementIntegerArray());
+
+        if (!validator.ValidateOrder<int>(temp))
+        {
+            Assert.Fail();
+        }
     }
 }

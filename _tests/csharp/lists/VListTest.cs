@@ -1,6 +1,6 @@
 using NUnit.Framework;
 using AaDS.Lists;
-using AaDS.DataProvider;
+using AaDS.Helper;
 
 [TestFixture]
 public class VListTest

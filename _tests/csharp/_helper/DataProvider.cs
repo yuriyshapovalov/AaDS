@@ -1,8 +1,9 @@
-namespace AaDS.DataProvider
+namespace AaDS.Helper
 {
     public class DataProvider
     {
         private static DataProvider _instance;
+        private static object syncObj = new object();
 
         private DataProvider() { }
 
@@ -10,7 +11,13 @@ namespace AaDS.DataProvider
         {
             if (_instance == null)
             {
-                _instance = new DataProvider();
+                lock (syncObj)
+                {
+                    if (_instance == null)
+                    {
+                        _instance = new DataProvider();
+                    }
+                }
             }
             return _instance;
         }
