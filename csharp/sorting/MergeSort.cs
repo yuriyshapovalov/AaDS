@@ -18,5 +18,8 @@ namespace AaDS.Sorting
             // not implemented
             return array;
         }
+
+        private void Merge()
+        { }
     }
 }

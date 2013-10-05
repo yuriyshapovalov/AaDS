@@ -3,7 +3,6 @@ using AaDS.Sorting;
 using AaDS.Helper;
 
 [TestFixture]
-[Ignore("Not implemented")]
 public class GnomeSortTest
 {
     private ISort<int> sorter;
