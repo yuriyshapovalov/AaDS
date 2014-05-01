@@ -3,7 +3,7 @@ AaDS
 
 AaDS - Algorithms and Data Structures
 
-This repository contain implementation of different alogrithms and data structures with variations, on different languages.
+Repository contains implementation of most popular algorithms and data structures on different languages.
 
 And applicaions for performance measurement and analysis.
 

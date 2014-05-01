@@ -1,5 +1,6 @@
-echo off
+@echo off
 
+echo.
 echo **********************************************************
 echo **** AaDS - Algorittms and Data Structures 
 echo **** Licence: CC Attribution ShareAlike (CC-BY-SA 3.0)
@@ -13,4 +14,5 @@ call buildpython.bat
 call buildjavascript.bat
 call buildr.bat 
 
+echo.
 echo ================== AaDS BUILD COMPLETE ===================
