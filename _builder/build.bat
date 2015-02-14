@@ -1,6 +1,6 @@
 @echo off
 
-echo.
+echo.			
 echo **********************************************************
 echo **** AaDS - Algorittms and Data Structures 
 echo **** Licence: CC Attribution ShareAlike (CC-BY-SA 3.0)
