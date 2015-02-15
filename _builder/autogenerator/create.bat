@@ -1,7 +1,11 @@
 @echo off
 echo Creating stubs..
 
-IF NOT EXIST ..\..\csharp\%1 	    mkdir ..\..\csharp\%1
+REM %1 - algorithm cluster
+REM %2 - class/file/module name
+REM %3 - 
+
+IF NOT EXIST ..\..\%1\csharp 	    mkdir ..\..\csharp\%1
 IF NOT EXIST ..\..\java\%1 			mkdir ..\..\java\%1
 IF NOT EXIST ..\..\cpp\%1 		    mkdir ..\..\cpp\%1
 IF NOT EXIST ..\..\javascript\%1 	mkdir ..\..\javascript\%1

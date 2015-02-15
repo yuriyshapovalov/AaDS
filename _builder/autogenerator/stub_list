@@ -1,11 +1,3 @@
-REM should be called once
-REM preventing accidancly run
-goto exit
-
-; _call_ _FolderName_ _ClassName_ _Namespace_
-
-;Sorting
-
 call create sorting AdaptiveSort Sorting
 call create sorting AmericanFlagSort Sorting
 call create sorting BeadSort Sorting
