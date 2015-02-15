@@ -49,5 +49,3 @@ IF NOT EXIST ..\..\_tests\R\%1\%2Test.r 	    	copy /y NUL ..\..\_tests\R\%1\%2Te
 echo File "_tests\R\%1\%2Test.r" created.
 
 echo Done.
-
-
