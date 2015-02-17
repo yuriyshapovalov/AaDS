@@ -3,8 +3,7 @@ AaDS
 
 AaDS - Algorithms and Data Structures
 
-Repository contains implementation of most popular algorithms and data structures on different languages.
-
+Repository contain implementations of different algorithms and data structures.
 And applicaions for performance measurement and analysis.
 
 catalog structure
@@ -12,19 +11,20 @@ catalog structure
 [root]
 
 - [algorithm group]
- - [language]
-  - [algorithm subgroup]
-   - [..implementation variations]
+ - [algorithm subgroup]
+  - [algorithm name]
+   - [language]
 
 - _data
 
-- _client
+- env
  - [language]
 
 for example:
 
 AaDS
-- sorting
- - cpp
-  - [merge-sort]
-   - simple_merge_sort.cpp
+- sequence
+ - sorting
+  - mergesort
+   - cpp
+    - simple_merge_sort.cpp
