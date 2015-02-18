@@ -1,10 +1,15 @@
-@echo off
+#!/usr/bin/env python
+"""
+    Template
+"""
+# imports
 
-echo.# %2>>%1
-echo.# O(n) ~ >>%1
-echo.class %2:>>%1
-echo.	# Method description >>%1
-echo.	# O(n) ~ >>%1
-echo.	def stub_method(x):>>%1
-echo.		# >>%1
+class Stub(object):
+"""
+"""
 
+def stub_method(x):>>%1
+	# >>%1
+
+if __name__ == '__main__':
+    pass
