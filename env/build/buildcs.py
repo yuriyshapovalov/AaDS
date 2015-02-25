@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from subprocess import call
 
 build_code_start_message = "===================== BUILD C# CODE ======================"
 build_test_start_message = "===================== BUILD C# TESTS ====================="
