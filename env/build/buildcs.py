@@ -6,11 +6,11 @@ build_test_start_message = "===================== BUILD C# TESTS ===============
 
 def build_code():
     print(build_code_start_message)
-    # call(['C:\Windows\Microsoft.NET\Framework64\v4.0.30319\msbuild', '/t:Build', '/v:m', '/nologo'])
+    #call(['C:\Windows\Microsoft.NET\Framework64\v4.0.30319\msbuild', '/t:Build', '/v:m', '/nologo'])
 
 def build_test():
     print(build_test_start_message)
-    # call(['C:\Windows\Microsoft.NET\Framework64\v4.0.30319\msbuild csbuild.xml', '/t:BuildTests', '/v:m', '/nologo'])
+    #call(['C:\Windows\Microsoft.NET\Framework64\v4.0.30319\msbuild csbuild.xml', '/t:BuildTests', '/v:m', '/nologo'])
 
 if __name__ == '__main__':
     build_code()

@@ -7,7 +7,8 @@
   
   <target name="build" description="Do the build" depends="make.dirs">
     <javac includeantruntime="false" destdir="bin/java/class">
-        <src path="../java/sorting"/>
+        <src path="../../src/sorting/sort/java"/>
+        <src path="../../src/sorting/selectionsort/java"/>
     </javac>
   </target>
 

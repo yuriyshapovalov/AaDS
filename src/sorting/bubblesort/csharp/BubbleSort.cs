@@ -4,7 +4,7 @@ namespace AaDS.Sorting
 {
     /// <summary>
     /// Bubble sort algorithm
-    ///  Θ(n) ~ N^2
+    ///  Θ(N^2)
     /// </summary>
     public class BubbleSort<T> : ISort<T> where T : IComparable, new()
     {

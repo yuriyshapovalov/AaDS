@@ -6,15 +6,9 @@
 
   <ItemGroup>
     <!-- Sorting -->
-    <CSFilesSorting Include="..\csharp\sorting\*.cs" />
-    <CSTestsSorting Include="..\_tests\csharp\sorting\*.cs" />
+    <CSCodeSorting Include="..\csharp\sorting\*.cs" />
+    <CSTestSorting Include="..\_tests\csharp\sorting\*.cs" />
 
-    <CSFilesLists Include="..\csharp\lists\*.cs" />
-    <CSTestsLists Include="..\_tests\csharp\lists\*.cs" />
-
-    <CSFilesTrees Include="..\csharp\trees\*.cs" />
-    <CSTestsTrees Include="..\_tests\csharp\trees\*.cs" />
-    
     <CSTestHelper Include="..\_tests\csharp\_helper\*.cs" />
   </ItemGroup>
 
@@ -22,8 +16,6 @@
     <Reference Include="lib\nunit.framework.dll" />
     <Reference Include="lib\nunit.mocks.dll" />
     <Reference Include="bin\csharp\Sorting.dll" />
-    <Reference Include="bin\csharp\Lists.dll" />
-    <Reference Include="bin\csharp\Trees.dll" />
     <Reference Include="tests\csharp\TestHelper.dll" />
   </ItemGroup>
 
@@ -32,17 +24,10 @@
     <Message Text="**********************************************************" />
     <Message Text="                         Build Libraries" />
     <Message Text="**********************************************************" />
-    <Csc Sources="@(CSFilesSorting)"
+    <Csc Sources="@(CSCodeSorting)"
          TargetType="library" 
          OutputAssembly="$(BinPath)Sorting.dll" />
 
-    <Csc Sources="@(CSFilesLists)"
-         TargetType="library"
-         OutputAssembly="$(BinPath)Lists.dll" />
-
-    <Csc Sources="@(CSFilesTrees)"
-         TargetType="library"
-         OutputAssembly="$(BinPath)Trees.dll" />
   </Target>
 
   <Target Name="BuildTests">
@@ -54,32 +39,14 @@
          TargetType="library"
          OutputAssembly="$(TestBinPath)TestHelper.dll" />
 
-    <Csc Sources="@(CSFilesSorting)"
+    <Csc Sources="@(CSCodeSorting)"
          TargetType="library"
          OutputAssembly="$(TestBinPath)Sorting.dll" />
     
-    <Csc Sources="@(CSTestsSorting)" 
+    <Csc Sources="@(CSTestSorting)" 
          References="@(Reference)"
          TargetType="library" 
          OutputAssembly="$(TestBinPath)SortingTest.dll" />
-
-    <Csc Sources="@(CSFilesLists)"
-         TargetType="library"
-         OutputAssembly="$(TestBinPath)Lists.dll" />
-
-    <Csc Sources="@(CSTestsLists)"
-         References="@(Reference)"
-         TargetType="library"
-         OutputAssembly="$(TestBinPath)ListTest.dll" />
-
-    <Csc Sources="@(CSFilesTrees)"
-         TargetType="library"
-         OutputAssembly="$(TestBinPath)Trees.dll" />
-
-    <Csc Sources="@(CSTestsTrees)"
-         References="@(Reference)"
-         TargetType="library"
-         OutputAssembly="$(TestBinPath)TreesTest.dll" />
     
   </Target>
 
