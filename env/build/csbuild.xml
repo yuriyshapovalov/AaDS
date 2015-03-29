@@ -1,22 +1,22 @@
 <Project DefaultTarget="BuildWithTests" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <BinPath>bin\csharp\</BinPath>
-    <TestBinPath>tests\csharp\</TestBinPath>
+    <BinPath>bin/csharp/</BinPath>
+    <TestBinPath>tests/csharp/</TestBinPath>
   </PropertyGroup>
 
   <ItemGroup>
     <!-- Sorting -->
-    <CSCodeSorting Include="..\csharp\sorting\*.cs" />
-    <CSTestSorting Include="..\_tests\csharp\sorting\*.cs" />
+    <CSCodeSorting Include="../../src/sorting/**/csharp/*.cs" />
+    <CSTestSorting Include="../../test/csharp/sorting/*.cs" />
 
-    <CSTestHelper Include="..\_tests\csharp\_helper\*.cs" />
+    <CSTestHelper Include="../../test/csharp/_helper/*.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="lib\nunit.framework.dll" />
-    <Reference Include="lib\nunit.mocks.dll" />
-    <Reference Include="bin\csharp\Sorting.dll" />
-    <Reference Include="tests\csharp\TestHelper.dll" />
+    <Reference Include="lib/nunit.framework.dll" />
+    <Reference Include="lib/nunit.mocks.dll" />
+    <Reference Include="bin/csharp/Sorting.dll" />
+    <Reference Include="tests/csharp/TestHelper.dll" />
   </ItemGroup>
 
   <Target Name="Build">
