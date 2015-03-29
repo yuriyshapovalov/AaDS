@@ -6,8 +6,7 @@ build_test_start_message = "==================== BUILD JAVA TEST ===============
 
 def build_code():
     print(build_code_start_message)
-
-    # call(['ant', '-f', 'javabuild.xml'])
+    call(['ant', '-f', 'javabuild.xml'])
 
 def build_test():
     print(build_test_start_message)
