@@ -13,8 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="lib/nunit.framework.dll" />
-    <Reference Include="lib/nunit.mocks.dll" />
     <Reference Include="bin/csharp/Sorting.dll" />
     <Reference Include="tests/csharp/TestHelper.dll" />
   </ItemGroup>
