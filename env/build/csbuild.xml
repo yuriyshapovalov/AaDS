@@ -13,6 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="/usr/lib/cli/nunit.framework-2.6.3/nunit.framework.dll" />
+    <Reference Include="/usr/lib/cli/nunit.mocks-2.6.3/nunit.mocks.dll" />
     <Reference Include="bin/csharp/Sorting.dll" />
     <Reference Include="tests/csharp/TestHelper.dll" />
   </ItemGroup>
@@ -36,10 +38,6 @@
     <Csc Sources="@(CSTestHelper)"
          TargetType="library"
          OutputAssembly="$(TestBinPath)TestHelper.dll" />
-
-    <Csc Sources="@(CSCodeSorting)"
-         TargetType="library"
-         OutputAssembly="$(TestBinPath)Sorting.dll" />
     
     <Csc Sources="@(CSTestSorting)" 
          References="@(Reference)"
