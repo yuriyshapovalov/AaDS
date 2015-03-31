@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <!-- Sorting -->
-    <CSCodeSorting Include="../../src/sorting/**/csharp/*.cs" />
+    <CSCodeSorting Include="../../src/sorting/*/csharp/*.cs" />
     <CSTestSorting Include="../../test/csharp/sorting/*.cs" />
 
     <CSTestHelper Include="../../test/csharp/_helper/*.cs" />
@@ -46,8 +46,8 @@
     
   </Target>
 
-  <Target Name="Clear">
-    <Delete Files="$(BinaryPath)*.cs" />
+  <Target Name="Clean">
+    <Delete Files="$(BinaryPath)*.dll" />
   </Target>
 
   <Target Name="Rebuild" DependsOnTargets="Clean;Build" />

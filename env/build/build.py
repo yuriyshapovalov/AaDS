@@ -32,13 +32,15 @@ def build():
     buildcpp.build_code()
     buildcpp.build_test()
 	# buildcs.bat
-	# buildjava.bat
 	# buildcpp.bat
 	# buildpython.bat
 	# buildjavascript.bat
 	# buildr.bat 
 
     print(build_complete_message)
+
+def test():
+    #buildcs.run_tests()
 
 if __name__ == '__main__':
 	build()
