@@ -31,10 +31,13 @@ def build():
 
     buildcpp.build_code()
     buildcpp.build_test()
-	# buildcs.bat
-	# buildcpp.bat
-	# buildpython.bat
-	# buildjavascript.bat
+	
+    buildpython.build_code()
+    buildpython.build_test()
+
+    buildjs.build_code()
+    buildjs.build_test()
+	
 	# buildr.bat 
 
     print(build_complete_message)
