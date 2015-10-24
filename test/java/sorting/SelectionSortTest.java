@@ -3,7 +3,7 @@ import junit.framework.Assert;
 
 public class SelectionSortTest {
 
-	private SelectionSort _instance;
+	private SelectionSortTest _instance;
 
 	@SetUp
 	public void Init() {

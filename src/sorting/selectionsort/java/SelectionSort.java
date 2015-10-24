@@ -3,21 +3,26 @@ package AaDS.Sorting;
 /**
  * @description Selection sort algorithm implementation
  * @author Yuriy Shapovalov
- * @time_complexity O(N^2)
- * @space_complexity O(1)
+ * @time O(n^2)
+ * @space O(1)
  */
 public class SelectionSort implements ISort {
 	public int[] sort(int[] array) {
+		// for all elements in array
 		for(int i = 0; i < array.length; i++) {
 			
+			// assume that current element is minimal
 			int min = i;
 			
+			// iterate all elements from 'i' to the end of array (to the right) 
+			// and find element smaller than current
 			for(int j = i; j <= array.length; j++) {
 				if(array[min] > array[j]) {
 					min = j;
 				}
 			}
 			
+			// if found element smaller than 'i', need to put it into the place of 'i'
 			if(min != i)
 			{
 				int temp = array[i];
@@ -25,6 +30,7 @@ public class SelectionSort implements ISort {
 				array[min] = array[i];
 			}
 		}
+		// return sorted array
 		return array;
 	}
 }

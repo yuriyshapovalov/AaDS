@@ -6,7 +6,7 @@ namespace AaDS.Sorting
     /// Selection sort algorithm
     ///  Θ(n) ~ N^2
     /// </summary>
-    public class SelectionSort<T> : ISort<T> where T : IComparable, new()
+    public class SelectionSort<T> : ISort<T> where T : IComparable
     {
         public T[] Sort(T[] array)
         {
@@ -37,7 +37,7 @@ namespace AaDS.Sorting
                     array[min] = temp;
                 }       
             }
-            // array should be completely sorted here!
+            // array should be sorted here.
             return array;
         }
     }

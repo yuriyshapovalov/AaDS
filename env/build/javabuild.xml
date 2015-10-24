@@ -1,8 +1,15 @@
-<project name="AaDS" default="build">
+<project name="AaDS" default="runTests">
+
+  <target name="init">
+    <property name="sourceDir" value="" />
+    <property name="outputDir" value="" />
+    <property name="junitLocation" value="../lib/java/junit-4.12.jar" />
+  </target>
 
   <target name="make.dirs">
     <mkdir dir="bin/java" />
     <mkdir dir="bin/java/class" />
+    <mkdir dir="bin/java/test" />
   </target>
   
   <target name="build" description="Do the build" depends="make.dirs">
@@ -11,9 +18,32 @@
         <src path="../../src/sorting/selectionsort/java"/>
     </javac>
   </target>
+<!--
+  <target name="buildTest" description="Compile unit tests" depends="build">
+    <javac includeantruntime="false" destdir="bin/java/test">
+        <src path="../../test/java/sorting"/>
+    </javac>
+  </target>
+-->
+  <target name="runTests" description="Run all unit tests" depends="build">
+    <junit showoutput="true" printsummary="yes" haltonfailure="no">
+      <classpath>
+        <pathelement path="../lib/java/junit-4.12.jar" />
+        <pathelement location="bin/java/class/AaDS/sorting" />
+      </classpath>
+
+      <batchtest>
+        <fileset dir="../../test/java">
+          <include name="sorting/*Test.java" />
+        </fileset>
+      </batchtest>
+      <formatter type="brief" usefile="false" />
+    </junit>
+  </target>
 
   <target name="clean">
     <delete dir="bin/java" />
   </target>
+
   
 </project>
