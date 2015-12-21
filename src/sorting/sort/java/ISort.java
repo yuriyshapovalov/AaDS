@@ -1,5 +1,5 @@
 package AaDS.Sorting;
 
-public interface ISort {
-    int[] sort (int[] array);
+public interface ISort<T extends Comparable<T>> {
+    T[] sort (T[] array);
 }
