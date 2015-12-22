@@ -1,5 +1,6 @@
 AaDS
 ====
+[![Build Status](https://travis-ci.org/yuriyshapovalov/algorithms-java.svg?branch=master)](https://travis-ci.org/yuriyshapovalov/algorithms-java)
 
 AaDS - Algorithms and Data Structures
 

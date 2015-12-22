@@ -1,4 +1,4 @@
-<project name="algorithms-java" default="test">
+<project name="algorithms-java" default="compile">
   
   <property name="dir.build" value="bin" />
   <property name="dir.classes" value="${dir.build}/classes" />
