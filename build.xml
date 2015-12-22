@@ -1,0 +1,43 @@
+<project name="algorithms-java" default="test">
+  
+  <property name="dir.build" value="bin" />
+  <property name="dir.classes" value="${dir.build}/classes" />
+  <property name="dir.jar" value="${dir.build}/jar" />
+  <property name="dir.test" value="${dir.build}/test" />
+
+  <property name="junit.loc" value="test/lib/junit-4.12.jar" />
+  
+  <target name="compile" description="Compile...">
+    <javac includeantruntime="false" destdir="${dir.classes}">
+        <src path="sorting"/>
+    </javac>
+  </target>
+
+  <target name="compileTest" description="Compile tests..." depends="compile">
+    <javac includeantruntime="false" destdir="${dir.test}">
+        <src path="test/sorting"/>
+    </javac>
+    <echo message="Tests compilation done" />
+  </target>
+
+  <target name="test" description="Run unit tests" depends="compileTest">
+    <junit showoutput="true" printsummary="on" haltonfailure="no">
+      <classpath>
+        <pathelement path="${junit.loc}" />
+        <pathelement location="${dir.classes}" />
+      </classpath>
+
+      <batchtest>
+        <fileset dir="${dir.test}">
+          <include name="sorting/*Test.java" />
+        </fileset>
+      </batchtest>
+      <formatter type="brief" usefile="false" />
+    </junit>
+  </target>
+
+  <target name="clean">
+    <delete dir="${dir.build}" />
+  </target>
+  
+</project>

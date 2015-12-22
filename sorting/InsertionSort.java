@@ -1,5 +1,7 @@
-package algorithms-java.sorting;
+package algorithms.sorting;
 
-class InsertionSort<T> implements ISort<T> {
-
+class InsertionSort<T extends Comparable<T>> implements ISort<T> {
+    public T[] sort(T[] array) {
+        return array;
+    }
 }
