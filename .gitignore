@@ -22,3 +22,6 @@ bin/
 *VisualState.xml
 __pycache__
 *.pyc
+
+.classpath
+.project

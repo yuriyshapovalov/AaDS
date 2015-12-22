@@ -1,4 +1,0 @@
-class InsertionSort implements ISort {
-
-
-}

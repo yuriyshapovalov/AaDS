@@ -1,12 +1,10 @@
-package AaDS.Sorting;
+package algorithms-java.sorting;
 
 /**
  * @description Selection sort algorithm implementation
  * @author Yuriy Shapovalov
- * @time O(n^2)
- * @space O(1)
  */
-public class SelectionSort implements ISort {
+class SelectionSort<T> implements ISort<T> {
 	public int[] sort(int[] array) {
 		// for all elements in array
 		for(int i = 0; i < array.length; i++) {
