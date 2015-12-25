@@ -1,10 +1,17 @@
-<project name="algorithms-java" default="compile">
+<project name="algorithms-java" default="test">
   
   <property name="dir.build" value="bin" />
+  <property name="dir.test" value="test" />
   <property name="dir.classes" value="${dir.build}/classes" />
   <property name="dir.jar" value="${dir.build}/jar" />
-  <property name="dir.test" value="${dir.build}/test" />
+  <property name="dir.test.build" value="${dir.build}/test" />
   <property name="junit.loc" value="test/lib/junit-4.12.jar" />
+
+  <path id="junit.class.path"> 
+    <pathelement location="test/lib/junit-4.12.jar" />
+    <pathelement location="test/lib/hamcrest-core-1.3.jar" />
+    <pathelement location="${dir.classes}" /> 
+  </path>
   
   <target name="compile" description="Compile..." depends="make.bin">
     <javac includeantruntime="false" destdir="${dir.classes}">
@@ -13,7 +20,9 @@
   </target>
 
   <target name="compileTest" description="Compile tests..." depends="compile">
-    <javac includeantruntime="false" destdir="${dir.test}">
+    <javac includeantruntime="false" destdir="${dir.test.build}">
+        <classpath refid="junit.class.path" />
+
         <src path="test/sorting"/>
     </javac>
     <echo message="Tests compilation done" />
@@ -21,29 +30,29 @@
 
   <target name="test" description="Run unit tests" depends="compileTest">
     <junit showoutput="true" printsummary="on" haltonfailure="no">
+      <classpath refid="junit.class.path" />
       <classpath>
-        <pathelement path="${junit.loc}" />
-        <pathelement location="${dir.classes}" />
+        <pathelement location="${dir.test.build}"/>
       </classpath>
 
       <batchtest>
         <fileset dir="${dir.test}">
-          <include name="sorting/*Test.java" />
+          <include name="**/*Test.java" />
         </fileset>
       </batchtest>
       <formatter type="brief" usefile="false" />
     </junit>
   </target>
 
-  <target name="clean">
+  <target name="clean" description="Clean up old binary files...">
     <delete dir="${dir.build}" />
   </target>
 
-  <target name="make.bin" depends="clean">
+  <target name="make.bin" description="Create directories for compiled files" depends="clean">
     <mkdir dir="${dir.build}" />
     <mkdir dir="${dir.classes}" />
     <mkdir dir="${dir.jar}" />
-    <mkdir dir="${dir.test}" />
+    <mkdir dir="${dir.test.build}" />
   </target>
   
 </project>
