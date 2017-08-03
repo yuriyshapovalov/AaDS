@@ -1,17 +1,19 @@
 import org.junit.Test;
-import junit.framework.*;
+import org.junit.Before;
+import static org.junit.Assert.*;
+import junit.framework.Assert;
 
-public class InsertionSortTest extends TestCase {
+public class InsertionSortTest {
 
     private InsertionSort _instance;
 
-    @Override
+    @Before
     public void setUp() {
         _instance = new InsertionSort();
     }
 
     @Test
     public void stubTestFunc() {
-        //Assert.fail("not implemented");
+        Assert.fail("not implemented");
     }
 }
